@@ -125,7 +125,7 @@ def flow_qq(rho, rhoc, rhom, Vmax, model, rhom_tuide):
         case2 = (rho >=rhoc).__and__(rho <rhom)
         case3 = (rho>=rhom)
         f0 = 0.0
-        f1[Index_rhom] = rho*Vmax*(1-rho[Index_rhom]/rhom_tuide[Index_rhom])
+        f1[Index_rhom] = rho[Index_rhom]*Vmax*(1-rho[Index_rhom]/rhom_tuide[Index_rhom])
         f2 = a*rho*rho+b*rho+c
         f3 = 0.0
         f = case0*f0+case1*f1+case2*f2+case3*f3
